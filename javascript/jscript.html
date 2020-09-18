@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript/jscript.html</title>
+</head>
+<body>
+    <h2 id="h2">자바스크립트...</h2>
+    
+    <div>
+    <img src="https://www.w3schools.com/js/pic_bulboff.gif" style="width: 100px;"><br>
+    <button id="btnOn">Turn On Light</button>
+    <button onclick='turnoff()' >Turn Off Light</button>    
+    <button id="fontSize">폰트변경</button>
+    <button id="showoff">숨기기</button>
+</div>
+    
+    <script>
+        var btn = document.getElementById("btnOn");
+        btn.onclick = function(){
+            var img = document.getElementsByTagName("img");
+            img[0].setAttribute("src","https://www.w3schools.com/js/pic_bulbon.gif")
+        }
+
+        function turnoff() {
+            var img = document.getElementsByTagName("img");
+            img[0].setAttribute("src","https://www.w3schools.com/js/pic_bulboff.gif")
+        }
+
+        var fs = document.getElementById("fontSize");
+        fs.onclick = function() {
+            var a = document.getElementById("h2").style.fontSize;
+            if(a.equals("30px")) {
+                document.getElementById("h2").style.fontSize="15px";     
+            } else {
+                document.getElementById("h2").style.fontSize="30px";
+            }
+        }
+
+        var so = document.getElementById("showoff");
+        so.onclick = function() {
+            document.getElementById("h2").style.display="none";
+        }
+        
+
+    </script>
+</body>
+</html>

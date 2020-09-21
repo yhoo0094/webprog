@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .v1 {visibility: hidden; border: 1px dotted red;}
+        .v2 {visibility: visible; border: 1px dotted red;}
+        .v3 {display: none; border: 1px dotted red;}
+    </style>
+</head>
+<body>
+    <div class="v1"> <!-- 보이지 않도록 설정 됐지만 공간은 있음! -->
+        <img src="pic1.jpg">
+    </div>
+    <div class="v2"><img src="pic1.jpg"></div>
+    <div class="v3"> <!-- 보이지 않도록 설정하고 공간도 삭제 -->
+        <img src="pic1.jpg">
+    </div>
+    <div class="v2"><img src="pic1.jpg"></div>
+</body>
+</html>

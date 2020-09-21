@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            
+        }
+        #box1{
+            animation-timing-function: ease;
+            animation: boxmove 2s alternate infinite;
+        }
+        #box2{
+            animation-timing-function: linear;
+            animation: boxmove 2s alternate-reverse infinite;
+        }
+        #box3{
+            animation-timing-function: ease-out;
+            animation: boxmove 2s alternate infinite;
+        }
+        @keyframes boxmove{
+            from{left: 0px;}
+            from{top: 0px;}
+            to{left: 300px;}
+            to{top: 300px;}
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"><img src="/basic/alpaca.jpg"></div>
+    <div id="box2"><img src="/basic/alpaca.jpg"></div>
+    <div id="box3"><img src="/basic/alpaca.jpg"></div>
+</body>
+</html>
